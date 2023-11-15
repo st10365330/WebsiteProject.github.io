@@ -1,0 +1,211 @@
+/* Reset default styles for common elements */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; /* Add box-sizing for better layout control */
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(135deg, #1abc9c, #3498db);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 40px 0; /* Reduced header padding for better balance */
+  animation: headerBreathe 4s infinite alternate;
+}
+
+@keyframes headerBreathe {
+  0% {
+    background: linear-gradient(135deg, #1abc9c, #3498db);
+  }
+  100% {
+    background: linear-gradient(135deg, #3498db, #1abc9c);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 24px;
+  /* Add a playful bounce and spin on hover */
+  transition: transform 0.3s cubic-bezier(0.25, 0.5, 0.75, 1.5);
+}
+
+nav li:hover {
+  transform: translateY(-10px) scale(1.1) rotate(15deg);
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  /* Add a subtle text shadow for depth */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  /* Change hover color to a vibrant teal */
+  transition: color 0.3s ease-in-out, transform 0.3s cubic-bezier(0.25, 0.5, 0.75, 1.5);
+}
+
+nav a:hover {
+  color: #2ecc71; /* Change link color to a lively green on hover */
+  transform: rotateY(180deg); /* Add a 3D flip effect on hover */
+}
+
+
+
+/* Center the logo image */
+header img {
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(50%); /* Apply grayscale filter to the image */
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url('hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 200px 0;
+  color: #fff;
+  /* Add a subtle parallax effect */
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-attachment: fixed;
+  background-clip: content-box;
+}
+
+.hero h1 {
+  font-size: 72px;
+  margin-bottom: 40px;
+  background-image: linear-gradient(45deg, #1abc9c, #2ecc71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: textGradient 5s linear infinite;
+}
+
+@keyframes textGradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 30px 60px;
+  background: linear-gradient(45deg, #ff6b6b, #ff8c8c, #ff6b6b); /* Gradient button background */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  /* Add a mesmerizing shimmer effect */
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+  cursor: pointer; /* Custom cursor style */
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Footer styles */
+footer {
+  background: linear-gradient(135deg, #1abc9c, #3498db);
+  padding: 120px 0;
+  text-align: center;
+  /* Add a unique animation to the footer background */
+  animation: footerBreathe 4s infinite alternate-reverse;
+}
+
+@keyframes footerBreathe {
+  0% {
+    background: linear-gradient(135deg, #1abc9c, #3498db);
+  }
+  100% {
+    background: linear-gradient(135deg, #3498db, #1abc9c);
+  }
+}
+
+.footer-content {
+  color: #fff;
+}
+
+.footer-content ul {
+  list-style: none;
+  margin-top: 80px;
+  padding: 0;
+}
+
+.footer-content li {
+  display: inline;
+  margin-right: 80px;
+  /* Add a playful rotation and scale on hover for extra playfulness */
+  transition: transform 0.3s cubic-bezier(0.25, 0.5, 0.75, 1.5);
+}
+
+.footer-content li:hover {
+  transform: rotate(30deg) scale(1.2);
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+  /* Change
+
+/* Responsive Styles */
+@media (max-width: 960px) {
+  header {
+    padding: 20px 0; /* Further reduce header padding for smaller screens */
+  }
+
+  nav {
+    display: block; /* Stack navigation items for mobile screens */
+  }
+
+  nav ul {
+    flex-direction: column; /* Change navigation items layout to vertical stack */
+  }
+
+  nav li {
+    margin: 10px 0; /* Adjust margin for navigation items on mobile */
+    transform: none; /* Remove transform on mobile to prevent unintended behavior */
+  }
+
+  nav a {
+    transform: none; /* Remove transform on mobile for links */
+  }
+
+  .hero {
+    padding: 120px 0; /* Adjust hero section padding for smaller screens */
+  }
+
+  .hero h1 {
+    font-size: 36px; /* Reduce font size for better mobile readability */
+  }
+
+  .cta-button {
+    padding: 15px 30px; /* Reduce button padding for mobile screens */
+  }
+  
+}
